@@ -12,14 +12,52 @@ class MyCardApp extends StatelessWidget {
       home: Scaffold(
         body: Container(
           width: double.infinity,
-          color: Color.fromARGB(255, 115, 172, 117),
+          color: const Color.fromARGB(255, 115, 172, 117),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('THING1'),
-              Text('THING2'),
-              Text('THING3'),
-              Text('THING4'),
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/me.jpeg'),
+              ),
+              const Text(
+                'Matheus Costa',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              const Text(
+                'Web Developer',
+                style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.white,
+                    letterSpacing: 2.5),
+              ),
+              const Divider(
+                color: Colors.teal,
+                height: 20.0,
+                indent: 100.0,
+                endIndent: 100.0,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                padding: EdgeInsets.all(10.0),
+                child: Row(
+                  children: const [
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    Text('+55 86 99999-9999'),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
