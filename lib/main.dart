@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'simple_card.dart';
 
 void main() => runApp(const MyCardApp());
 
@@ -15,11 +16,12 @@ class MyCardApp extends StatelessWidget {
           color: const Color.fromARGB(255, 115, 172, 117),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const CircleAvatar(
+            children: const [
+              CircleAvatar(
+                radius: 50.0,
                 backgroundImage: AssetImage('assets/images/me.jpeg'),
               ),
-              const Text(
+              Text(
                 'Matheus Costa',
                 style: TextStyle(
                   fontFamily: 'Pacifico',
@@ -28,35 +30,28 @@ class MyCardApp extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              const Text(
+              Text(
                 'Web Developer',
                 style: TextStyle(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white,
-                    letterSpacing: 2.5),
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.white,
+                  letterSpacing: 2.5,
+                ),
               ),
-              const Divider(
+              Divider(
                 color: Colors.teal,
                 height: 20.0,
                 indent: 100.0,
                 endIndent: 100.0,
               ),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: const [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    Text('+55 86 99999-9999'),
-                  ],
-                ),
+              SimpleCard(
+                icon: Icons.phone,
+                text: '+55 (86) 99999-9999',
+              ),
+              SimpleCard(
+                icon: Icons.mail,
+                text: 'matheuscosta.tech@gmail.com',
               ),
             ],
           ),
