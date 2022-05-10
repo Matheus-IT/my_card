@@ -13,7 +13,7 @@ class MyCardApp extends StatelessWidget {
       home: Scaffold(
         body: Container(
           width: double.infinity,
-          color: const Color.fromARGB(255, 115, 172, 117),
+          color: Colors.teal,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
@@ -40,7 +40,7 @@ class MyCardApp extends StatelessWidget {
                 ),
               ),
               Divider(
-                color: Colors.teal,
+                color: Colors.white,
                 height: 20.0,
                 indent: 100.0,
                 endIndent: 100.0,
